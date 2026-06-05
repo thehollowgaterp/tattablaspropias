@@ -5,7 +5,7 @@
   height: auto;
   padding: 28px;
   margin: 20px auto;
-  color: #dff7ff;
+  color: var(--subtitle);
   font-family: 'Orbitron', Arial, sans-serif;
   text-align:center;
   font-size:15px;
