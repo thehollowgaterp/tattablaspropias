@@ -1,0 +1,19 @@
+.status-window {
+  width: min(100%, 720px);
+  box-sizing: border-box;
+  /* La altura se ajusta sola */
+  height: auto;
+  padding: 28px;
+  margin: 20px auto;
+  color: #dff7ff;
+  font-family: 'Orbitron', Arial, sans-serif;
+  text-align:center;
+  font-size:15px;
+  line-height: 25px;
+  white-space: pre-line;
+  background: linear-gradient(rgba(0, 20, 50, 0.85), rgba(0, 10, 30, 0.9)), url("https://i.imgur.com/KGM0Y8t.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border: 2px solid #00aaff;
+  box-shadow: 0 0 12px #00aaff, inset 0 0 20px rgba(0, 170, 255, 0.45);
+}
