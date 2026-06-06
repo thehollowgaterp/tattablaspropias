@@ -1,3 +1,4 @@
+/* VENTANA DE ESTADO MADRE / PROFESIONAL */
 .tatvenest1 {
   width: min(100%, 500px);
   box-sizing: border-box;
@@ -18,4 +19,73 @@
   background-repeat: no-repeat;
   border: 2px solid #00aaff;
   box-shadow: 0 0 12px #00aaff, inset 0 0 20px rgba(0, 170, 255, 0.45);
+}
+
+/* VENTANA DE ESTADO ENOJADA */
+.tatvenest2 {
+  width: min(100%, 500px);
+  box-sizing: border-box;
+  /* La altura se ajusta sola */
+  height: auto;
+  padding: 30px;
+  margin: 20px auto;
+  color: var(--subtitle);
+  font-family: 'Orbitron', Arial, sans-serif;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  line-height: 25px;
+  white-space: pre-line;
+  background: linear-gradient(rgba(50, 0, 0, 0.85), rgba(30, 0, 0, 0.9)), url("https://images2.imgbox.com/fe/8f/e3mU4wG8_o.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border: 2px solid #ff0000;
+  box-shadow: 0 0 12px #ff0000, inset 0 0 20px rgba(255, 0, 0, 0.45);
+}
+
+/* VENTANA DE ESTADO OPTIMISTA */
+.tatvenest3 {
+  width: min(100%, 500px);
+  box-sizing: border-box;
+  /* La altura se ajusta sola */
+  height: auto;
+  padding: 30px;
+  margin: 20px auto;
+  color: var(--subtitle);
+  font-family: 'Orbitron', Arial, sans-serif;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  line-height: 25px;
+  white-space: pre-line;
+  background: linear-gradient(rgba(0, 50, 0, 0.85), rgba(0, 30, 0, 0.9)), url("https://images2.imgbox.com/8e/6b/W4Ec2npY_o.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border: 2px solid #00FF00;
+  box-shadow: 0 0 12px #00FF00, inset 0 0 20px rgba(0, 255, 0, 0.45);
+}
+
+/* VENTANA DE ESTADO SALIDA */
+.tatvenest4 {
+  width: min(100%, 500px);
+  box-sizing: border-box;
+  /* La altura se ajusta sola */
+  height: auto;
+  padding: 30px;
+  margin: 20px auto;
+  color: var(--subtitle);
+  font-family: 'Orbitron', Arial, sans-serif;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  line-height: 25px;
+  white-space: pre-line;
+  background: linear-gradient(rgba(50, 0, 50, 0.85), rgba(30, 0, 30, 0.9)), url("https://images2.imgbox.com/61/eb/74qIMseU_o.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border: 2px solid #FB79B3;
+  box-shadow: 0 0 12px #FB79B3, inset 0 0 20px rgba(255, 0, 255, 0.45);
 }
