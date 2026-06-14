@@ -1,4 +1,4 @@
-.battle-wrapper {
+.tatbattle-wrapper {
   width: min(100%, 501px);
   box-sizing: border-box;
   display: grid;
@@ -8,7 +8,7 @@
   isolation: isolate;
 }
 
-.status-card {
+.tatstatus-card {
   width: 100%;
   box-sizing: border-box;
   border: 2px solid currentColor;
@@ -19,7 +19,7 @@
   z-index: 1;
 }
 
-.status-blue {
+.tatstatus-blue {
   color: #9eeeff;
   background: linear-gradient(rgba(0, 20, 50, 0.85), rgba(0, 10, 30, 0.9)), url("https://images2.imgbox.com/93/53/blJ7MTzy_o.png");
   background-size: 100% 100%;
@@ -35,7 +35,7 @@
     0 0 10px rgba(0, 170, 255, 0.55);
 }
 
-.status-red {
+.tatstatus-red {
   color: #ffd6d6;
   background: linear-gradient(rgba(50, 0, 0, 0.85), rgba(30, 0, 0, 0.9)), url("https://images2.imgbox.com/fe/8f/e3mU4wG8_o.png");
   background-size: 100% 100%;
@@ -51,7 +51,7 @@
     0 0 10px rgba(255, 0, 0, 0.55);
 }
 
-.versus-divider {
+.tatversus-divider {
   position: relative;
   z-index: 20;
   width: 2px;
@@ -61,17 +61,18 @@
     0 0 12px rgba(196, 92, 255, 0.85);
 }
 
-.top-block {
+.tattop-block {
   display: grid;
   grid-template-columns: 38% 62%;
   border-bottom: 1px solid currentColor;
+  border-bottom: none;
 }
 
-.top-block.reverse {
+.tattop-block.reverse {
   grid-template-columns: 62% 38%;
 }
 
-.icon-box {
+.taticon-box {
   height: auto;
   box-sizing: border-box;
   display: flex;
@@ -79,23 +80,24 @@
   justify-content: center;
   padding: 5px;
   text-align: center;
+  font-size: 45px;
 }
 
-.status-blue .icon-box {
+.tatstatus-blue .taticon-box {
   border-right: 1px solid currentColor;
 }
 
-.status-red .icon-box {
+.tatstatus-red .taticon-box {
   border-left: 1px solid currentColor;
 }
 
-.info-block {
+.tatinfo-block {
   display: flex;
   flex-direction: column;
   min-width: 0;
 }
 
-.name-box {
+.tatname-box {
   height: 40px;
   box-sizing: border-box;
   display: flex;
@@ -115,14 +117,14 @@
   overflow-wrap: anywhere;
 }
 
-.hp-box{
+.tathp-box{
   height: auto;
   box-sizing: border-box;
   padding: 5px 5px;
   border-bottom: 1px solid currentColor;
 }
 
-.hp-text{
+.tathp-text{
   margin-bottom: 5px;
   font-size: 12px;
   line-height: 12px;
@@ -132,7 +134,7 @@
   text-transform: uppercase;
 }
 
-.hp-bar {
+.tathp-bar {
   width: 100%;
   height: 10px;
   box-sizing: border-box;
@@ -142,28 +144,28 @@
   box-shadow: inset 0 0 6px rgba(0,0,0,0.95),0 0 5px currentColor;
 }
 
-.hp-fill {
+.tathp-fill {
   height: 100%;
   width: calc((var(--hp) / var(--hp-max)) * 100%);
   transition: width 0.3s ease;
 }
 
-.status-blue .hp-fill {
+.tatstatus-blue .tathp-fill {
   background: linear-gradient(90deg,#0066ff,#00eaff);
   box-shadow: 0 0 12px #00aaff, inset 0 0 20px rgba(0, 170, 255, 0.45);
 }
 
-.status-red .hp-fill {
+.tatstatus-red .tathp-fill {
   background: linear-gradient(90deg,#8b0000,#ff1a1a);
   box-shadow: 0 0 12px #ff0000, inset 0 0 20px rgba(255, 0, 0, 0.45);
 }
 
-.stats-grid {
+.tatstats-grid {
   display: grid;
   grid-template-columns: repeat(3,1fr);
 }
 
-.stats-grid div {
+.tatstats-grid div {
   height: auto;
   box-sizing: border-box;
   padding: 5px 5px;
@@ -176,15 +178,15 @@
   border-bottom:1px solid currentColor;
 }
 
-.stats-grid div:nth-child(3n) {
+.tatstats-grid div:nth-child(3n) {
   border-right: none;
 }
 
-.stats-grid div:nth-last-child(-n + 3) {
+.tatstats-grid div:nth-last-child(-n + 3) {
   border-bottom: none;
 }
 
-.stats-grid span {
+.tatstats-grid span {
   display: block;
   font-size: 12px;
   line-height: 12px;
@@ -192,32 +194,34 @@
   text-shadow: none;
 }
 
-.stats-grid b {
+.tatstats-grid b {
   display: block;
   font-family: Orbitron;
   font-size: 10px;
   line-height: 10px;
   letter-spacing: 1px;
   font-weight: bold;
+  color: currentColor !important;
 }
 
-.section {
+.tatsection {
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid currentColor;
 }
 
-.section:last-child {
+.tatsection:last-child {
   border-bottom: none;
 }
 
-.section-title {
+.tatsection-title {
   height: auto;
   box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 5px 5px;
+  border-top: 1px solid currentColor;
   border-bottom: 1px solid currentColor;
   font-weight: bold;
   letter-spacing: 1px;
@@ -228,7 +232,7 @@
   line-height: 10px;
 }
 
-.section-content {
+.tatsection-content {
   background: #0c0c0c;
   height: 100px;
   overflow-y: auto;
@@ -240,67 +244,74 @@
   color: #999;
   text-shadow:none;
   scrollbar-width: thin;
-  scrollbar-color: currentColor #111;
+  scrollbar-color: currentColor #111 !important;
 }
 
-.section-content::-webkit-scrollbar {
-  width: 7px;
+.tatbattle-wrapper .tatsection-content {
+  scrollbar-width: thin !important;
 }
 
-.section-content::-webkit-scrollbar-track {
-  background: #050505;
-  border-left: 1px solid rgba(255, 255, 255, 0.08);
+.tatbattle-wrapper .tatsection-content::-webkit-scrollbar {
+  width: 7px !important;
+  background: #050505 !important;
 }
 
-.section-content::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  border: 1px solid #050505;
+.tatbattle-wrapper .tatsection-content::-webkit-scrollbar-track {
+  background: #050505 !important;
+  border-left: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
-.status-blue .section-content {
-  scrollbar-color: #00aaff #050505;
+.tatbattle-wrapper .tatsection-content::-webkit-scrollbar-thumb {
+  border-radius: 10px !important;
+  border: 1px solid #050505 !important;
 }
 
-.status-red .section-content {
-  scrollbar-color: #ff1a1a #050505;
+.tatbattle-wrapper .tatstatus-blue .tatsection-content {
+  scrollbar-color: #00aaff #050505 !important;
 }
 
-.status-blue .section-content::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #9eeeff, #00aaff);
-  box-shadow: 0 0 6px #00aaff;
+.tatbattle-wrapper .tatstatus-red .tatsection-content {
+  scrollbar-color: #ff1a1a #050505 !important;
 }
 
-.status-red .section-content::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #ffd6d6, #ff1a1a);
-  box-shadow: 0 0 6px #ff0000;
+.tatbattle-wrapper .tatstatus-blue .tatsection-content::-webkit-scrollbar-thumb {
+  background-color: #00aaff !important;
+  background-image: linear-gradient(180deg, #9eeeff, #00aaff) !important;
+  box-shadow: 0 0 6px #00aaff !important;
+}
+
+.tatbattle-wrapper .tatstatus-red .tatsection-content::-webkit-scrollbar-thumb {
+  background-color: #ff1a1a !important;
+  background-image: linear-gradient(180deg, #ffd6d6, #ff1a1a) !important;
+  box-shadow: 0 0 6px #ff0000 !important;
 }
 
 @media (max-width: 420px){
-  .battle-wrapper {
+  .tatbattle-wrapper {
     font-size: 8px;
   }
   
-  .top-block,.top-block.reverse {
+  .tattop-block,.tattop-block.reverse {
     grid-template-columns: 38% 62%;
   }
   
-  .stats-grid span {
+  .tatstats-grid span {
     font-size: 6px;
   }
   
-  .stats-grid b {
+  .tatstats-grid b {
     font-size: 10px;
   }
   
-  .icon-box {
+  .taticon-box {
     min-height: 110px;
   }
   
-  .section-content{
+  .tatsection-content{
     padding:8px;
   }
   
-  .name-box {
+  .tatname-box {
     height: 40px;
     font-size: 10px;
     line-height: 10px;
