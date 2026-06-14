@@ -1,3 +1,5 @@
+/* TABLA DE COMBATE PJ VS MOB */
+
 .tatbattle-wrapper {
   width: min(100%, 501px);
   box-sizing: border-box;
@@ -334,4 +336,64 @@
   z-index: 50;
   background: linear-gradient(90deg,#00aaff 0%,#00aaff calc(50% - 1px),#c45cff 50%,#ff0000 calc(50% + 1px),#ff0000 100%);
   box-shadow:-8px 0 14px rgba(0, 170, 255, 0.75),8px 0 14px rgba(255, 0, 0, 0.75),0 0 10px rgba(196, 92, 255, 0.75);
+}
+
+/* TABLA DE COMBATE PJ VS PJ */
+
+.tatbattle-wrapper.tatbattle-solo {
+  grid-template-columns: 1fr;
+  width: min(100%, 501px);
+}
+
+.tatbattle-wrapper.tatbattle-solo .tatversus-divider {
+  display: none;
+}
+
+.tatbattle-wrapper.tatbattle-solo .tatstatus-card {
+  width: 100%;
+}
+
+.tatbattle-wrapper.tatbattle-solo .tatstatus-blue {
+  border-right: 2px solid #00aaff;
+}
+
+.tatbattle-wrapper.tatbattle-solo .tattop-block {
+  grid-template-columns: 38% 62%;
+}
+
+.tatbattle-wrapper.tatbattle-solo .tatstats-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  grid-auto-flow: row !important;
+  width: 100%;
+}
+
+.tatbattle-wrapper.tatbattle-solo .tatstats-grid > div {
+  width: auto !important;
+  margin: 0 !important;
+  float: none !important;
+  min-width: 0;
+  border-right: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+}
+
+.tatbattle-wrapper.tatbattle-solo .tatstats-grid > div:nth-child(3n) {
+  border-right: none;
+}
+
+.tatbattle-wrapper.tatbattle-solo .tatstats-grid > div:nth-last-child(-n + 3) {
+  border-bottom: none;
+}
+
+.tatbattle-wrapper.tatbattle-solo::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  pointer-events: none;
+  z-index: 50;
+  background: #00aaff;
+  box-shadow: 0 0 10px #00aaff,0 0 18px rgba(0, 170, 255, 0.8);
 }
