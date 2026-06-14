@@ -1,0 +1,319 @@
+.tatbattle-wrapper {
+  width: min(100%, 501px);
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: calc((100% - 2px) / 2) 2px calc((100% - 2px) / 2);
+  gap: 0;
+  margin: 20px auto;
+  isolation: isolate;
+}
+
+.tatstatus-card {
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid currentColor;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.tatstatus-blue {
+  color: #9eeeff;
+  background: linear-gradient(rgba(0, 20, 50, 0.85), rgba(0, 10, 30, 0.9)), url("https://images2.imgbox.com/93/53/blJ7MTzy_o.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-color: #00aaff;
+  border-right: none;
+  box-shadow:
+    0 0 12px #00aaff,
+    inset 0 0 20px rgba(0, 170, 255, 0.45);
+  text-shadow:
+    0 0 5px rgba(0, 170, 255, 0.9),
+    0 0 10px rgba(0, 170, 255, 0.55);
+}
+
+.tatstatus-red {
+  color: #ffd6d6;
+  background: linear-gradient(rgba(50, 0, 0, 0.85), rgba(30, 0, 0, 0.9)), url("https://images2.imgbox.com/fe/8f/e3mU4wG8_o.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-color: #ff0000;
+  border-left: none;
+  box-shadow:
+    0 0 12px #ff0000,
+    inset 0 0 20px rgba(255, 0, 0, 0.45);
+  text-shadow:
+    0 0 5px rgba(255, 0, 0, 0.9),
+    0 0 10px rgba(255, 0, 0, 0.55);
+}
+
+.tatversus-divider {
+  position: relative;
+  z-index: 20;
+  width: 2px;
+  background: #c45cff;
+  box-shadow:
+    0 0 6px #c45cff,
+    0 0 12px rgba(196, 92, 255, 0.85);
+}
+
+.tattop-block {
+  display: grid;
+  grid-template-columns: 38% 62%;
+  border-bottom: 1px solid currentColor;
+  border-bottom: none;
+}
+
+.tattop-block.reverse {
+  grid-template-columns: 62% 38%;
+}
+
+.taticon-box {
+  height: auto;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  text-align: center;
+}
+
+.tatstatus-blue .taticon-box {
+  border-right: 1px solid currentColor;
+}
+
+.tatstatus-red .taticon-box {
+  border-left: 1px solid currentColor;
+}
+
+.tatinfo-block {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.tatname-box {
+  height: 40px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 5px;
+  border-bottom: 1px solid currentColor;
+  font-weight: bold;
+  font-family: Orbitron;
+  font-size: 10px;
+  line-height: 10px;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: normal;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+}
+
+.tathp-box{
+  height: auto;
+  box-sizing: border-box;
+  padding: 5px 5px;
+  border-bottom: 1px solid currentColor;
+}
+
+.tathp-text{
+  margin-bottom: 5px;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  color: currentColor;
+  text-shadow: none;
+  text-transform: uppercase;
+}
+
+.tathp-bar {
+  width: 100%;
+  height: 10px;
+  box-sizing: border-box;
+  background: rgba(0,0,0,0.75);
+  border: 1px solid currentColor;
+  overflow: hidden;
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.95),0 0 5px currentColor;
+}
+
+.tathp-fill {
+  height: 100%;
+  width: calc((var(--hp) / var(--hp-max)) * 100%);
+  transition: width 0.3s ease;
+}
+
+.tatstatus-blue .tathp-fill {
+  background: linear-gradient(90deg,#0066ff,#00eaff);
+  box-shadow: 0 0 12px #00aaff, inset 0 0 20px rgba(0, 170, 255, 0.45);
+}
+
+.tatstatus-red .tathp-fill {
+  background: linear-gradient(90deg,#8b0000,#ff1a1a);
+  box-shadow: 0 0 12px #ff0000, inset 0 0 20px rgba(255, 0, 0, 0.45);
+}
+
+.tatstats-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+
+.tatstats-grid div {
+  height: auto;
+  box-sizing: border-box;
+  padding: 5px 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-right: 1px solid currentColor;
+  border-bottom:1px solid currentColor;
+}
+
+.tatstats-grid div:nth-child(3n) {
+  border-right: none;
+}
+
+.tatstats-grid div:nth-last-child(-n + 3) {
+  border-bottom: none;
+}
+
+.tatstats-grid span {
+  display: block;
+  font-size: 12px;
+  line-height: 12px;
+  text-transform: uppercase;
+  text-shadow: none;
+}
+
+.tatstats-grid b {
+  display: block;
+  font-family: Orbitron;
+  font-size: 10px;
+  line-height: 10px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: currentColor !important;
+}
+
+.tatsection {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid currentColor;
+}
+
+.tatsection:last-child {
+  border-bottom: none;
+}
+
+.tatsection-title {
+  height: auto;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 5px;
+  border-top: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: Orbitron;
+  font-size: 10px;
+  line-height: 10px;
+}
+
+.tatsection-content {
+  background: #0c0c0c;
+  height: 100px;
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 10px;
+  white-space: pre-line;
+  overflow-wrap: break-word;
+  text-align: justify;
+  color: #999;
+  text-shadow:none;
+  scrollbar-width: thin;
+  scrollbar-color: currentColor #111 !important;
+}
+
+.tatbattle-wrapper .tatsection-content {
+  scrollbar-width: thin !important;
+}
+
+.tatbattle-wrapper .tatsection-content::-webkit-scrollbar {
+  width: 7px !important;
+  background: #050505 !important;
+}
+
+.tatbattle-wrapper .tatsection-content::-webkit-scrollbar-track {
+  background: #050505 !important;
+  border-left: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.tatbattle-wrapper .tatsection-content::-webkit-scrollbar-thumb {
+  border-radius: 10px !important;
+  border: 1px solid #050505 !important;
+}
+
+.tatbattle-wrapper .tatstatus-blue .tatsection-content {
+  scrollbar-color: #00aaff #050505 !important;
+}
+
+.tatbattle-wrapper .tatstatus-red .tatsection-content {
+  scrollbar-color: #ff1a1a #050505 !important;
+}
+
+.tatbattle-wrapper .tatstatus-blue .tatsection-content::-webkit-scrollbar-thumb {
+  background-color: #00aaff !important;
+  background-image: linear-gradient(180deg, #9eeeff, #00aaff) !important;
+  box-shadow: 0 0 6px #00aaff !important;
+}
+
+.tatbattle-wrapper .tatstatus-red .tatsection-content::-webkit-scrollbar-thumb {
+  background-color: #ff1a1a !important;
+  background-image: linear-gradient(180deg, #ffd6d6, #ff1a1a) !important;
+  box-shadow: 0 0 6px #ff0000 !important;
+}
+
+@media (max-width: 420px){
+  .tatbattle-wrapper {
+    font-size: 8px;
+  }
+  
+  .tattop-block,.tattop-block.reverse {
+    grid-template-columns: 38% 62%;
+  }
+  
+  .tatstats-grid span {
+    font-size: 6px;
+  }
+  
+  .tatstats-grid b {
+    font-size: 10px;
+  }
+  
+  .taticon-box {
+    min-height: 110px;
+  }
+  
+  .tatsection-content{
+    padding:8px;
+  }
+  
+  .tatname-box {
+    height: 40px;
+    font-size: 10px;
+    line-height: 10px;
+    letter-spacing: 1px;
+  }
+}
