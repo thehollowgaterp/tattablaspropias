@@ -247,8 +247,8 @@
   text-align: justify;
   color: #999;
   text-shadow:none;
-  scrollbar-width: thin;
-  scrollbar-color: currentColor #111 !important;
+  font-size: calc(var(--fs-body) - 1px);
+  line-height: calc(var(--fs-body) + 3px);
 }
 
 .tatbattle-wrapper .tatsection-content {
