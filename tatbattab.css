@@ -83,6 +83,10 @@
   font-size: 45px;
 }
 
+.taticon-box i {
+  color: currentColor !important;
+}
+
 .tatstatus-blue .taticon-box {
   border-right: 1px solid currentColor;
 }
