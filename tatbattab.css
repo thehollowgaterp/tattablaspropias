@@ -24,7 +24,7 @@
 
 .tatstatus-blue {
   color: #9eeeff;
-  background:linear-gradient(rgba(0, 20, 50, 0.85), rgba(0, 10, 30, 0.9)),url("https://images2.imgbox.com/93/53/blJ7MTzy_o.png");
+  background:linear-gradient(rgba(0, 20, 50, 0.85), rgba(0, 10, 30, 0.9)),url("https://i.postimg.cc/1XWXqshb/Ventana-de-estado-normal.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
@@ -36,7 +36,7 @@
 
 .tatstatus-red {
   color: #ffd6d6;
-  background:linear-gradient(rgba(50, 0, 0, 0.85), rgba(30, 0, 0, 0.9)),url("https://images2.imgbox.com/fe/8f/e3mU4wG8_o.png");
+  background:linear-gradient(rgba(50, 0, 0, 0.85), rgba(30, 0, 0, 0.9)),url("https://i.postimg.cc/Y9YCbQcV/Ventana-de-estado-enojada.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
